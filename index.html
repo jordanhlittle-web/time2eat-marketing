@@ -808,19 +808,6 @@
     }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { color: var(--white); }
-    .mobile-menu .mob-cta {
-      margin-top: 8px;
-      padding: 14px;
-      background: var(--pink);
-      color: var(--white);
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      border-radius: 12px;
-      text-align: center;
-      border-bottom: none;
-    }
-    .mobile-menu .mob-cta:hover { background: #FF33FF; color: var(--white); }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -866,15 +853,14 @@
         </svg>
       </button>
     </div>
-  </nav>
 
-  <!-- ── Mobile menu ── -->
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="#features" onclick="closeMobileMenu()">Features</a>
-    <a href="#how-it-works" onclick="closeMobileMenu()">How it works</a>
-    <a href="#cities" onclick="closeMobileMenu()">Cities</a>
-    <a href="#download" class="mob-cta" onclick="closeMobileMenu()">Download the App</a>
-  </div>
+    <!-- Mobile menu sits inside nav so it stays sticky -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#features" onclick="closeMobileMenu()">Features</a>
+      <a href="#how-it-works" onclick="closeMobileMenu()">How it works</a>
+      <a href="#cities" onclick="closeMobileMenu()">Cities</a>
+    </div>
+  </nav>
 
   <!-- ── Hero ── -->
   <section style="position:relative;z-index:1;">
