@@ -784,6 +784,67 @@
     }
     .footer-bottom a:hover { color: var(--gray); }
 
+    /* ── Mobile bottom bar ── */
+    .mobile-bottom-bar {
+      display: none;
+    }
+    @media (max-width: 680px) {
+      /* Hide hamburger toggle */
+      .nav-mobile-toggle { display: none; }
+      /* Hide nav links and CTA in top nav on mobile */
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+
+      /* Add padding to body so content isn't hidden behind bar */
+      body { padding-bottom: 72px; }
+
+      .mobile-bottom-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 200;
+        background: rgba(15, 20, 30, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top: 1px solid var(--border);
+        padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+        gap: 4px;
+      }
+      .mob-bar-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 4px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: var(--gray2);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        transition: color 0.2s, background 0.2s;
+      }
+      .mob-bar-item:hover, .mob-bar-item.active {
+        color: var(--white);
+        background: rgba(255,255,255,0.06);
+      }
+      .mob-bar-item svg { width: 20px; height: 20px; }
+      .mob-bar-download {
+        flex: 1.4;
+        background: var(--pink);
+        color: var(--white);
+        border-radius: 12px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+      }
+      .mob-bar-download:hover {
+        background: #FF33FF;
+        color: var(--white);
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -1137,6 +1198,26 @@
       </span>
     </div>
   </footer>
+
+  <!-- ── Mobile bottom bar ── -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile navigation">
+    <a href="#features" class="mob-bar-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      Features
+    </a>
+    <a href="#how-it-works" class="mob-bar-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      How it works
+    </a>
+    <a href="#cities" class="mob-bar-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Cities
+    </a>
+    <a href="#download" class="mob-bar-item mob-bar-download">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download
+    </a>
+  </nav>
 
   <script>
     // Smooth scroll for nav links
