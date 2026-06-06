@@ -800,14 +800,16 @@
 
       .mobile-bottom-bar {
         display: flex;
+        align-items: center;
         position: fixed;
         bottom: 0; left: 0; right: 0;
+        height: calc(60px + env(safe-area-inset-bottom));
         z-index: 200;
         background: rgba(15, 20, 30, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-top: 1px solid var(--border);
-        padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+        padding: 0 8px env(safe-area-inset-bottom);
         gap: 4px;
       }
       .mob-bar-item {
@@ -815,8 +817,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 4px;
-        padding: 6px 4px;
+        height: 48px;
+        padding: 0 4px;
         border-radius: 10px;
         text-decoration: none;
         color: var(--gray2);
@@ -838,6 +842,7 @@
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
         font-size: 11px;
+        height: 44px;
       }
       .mob-bar-download:hover {
         background: #FF33FF;
