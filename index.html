@@ -232,6 +232,31 @@
       border-color: #6B7280;
       transform: translateY(-1px);
     }
+    .store-btn-wrap {
+      position: relative;
+      display: inline-flex;
+    }
+    .store-btn.greyed {
+      opacity: 0.4;
+      cursor: default;
+      pointer-events: none;
+    }
+    .coming-soon-badge {
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 9px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
     .store-btn-text { display: flex; flex-direction: column; gap: 1px; }
     .store-btn-sub { font-size: 10px; color: var(--gray); letter-spacing: 0.03em; }
     .store-btn-name { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; }
@@ -883,13 +908,16 @@
               <span class="store-btn-name">App Store</span>
             </span>
           </a>
-          <a href="#" class="store-btn" aria-label="Get it on Google Play">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.15l12.6-7.29-2.76-2.76L3.18 23.76zM.87 1.7C.33 2.25 0 3.1 0 4.22v15.56c0 1.12.33 1.97.87 2.52l.13.13 8.72-8.72v-.21L1 1.57l-.13.13zM20.12 10.44l-2.48-1.43-3.09 3.09 3.09 3.09 2.5-1.44c.71-.41.71-1.09 0-1.5l-.02-.81zM4.17.24l12.6 7.29-2.76 2.76L3.18.24C3.53.17 3.87.22 4.17.24z"/></svg>
-            <span class="store-btn-text">
-              <span class="store-btn-sub">Get it on</span>
-              <span class="store-btn-name">Google Play</span>
-            </span>
-          </a>
+          <div class="store-btn-wrap">
+            <span class="coming-soon-badge">Coming Soon</span>
+            <a href="#" class="store-btn greyed" aria-label="Get it on Google Play (coming soon)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.99.15l12.6-7.29-2.76-2.76L3.18 23.76zM.87 1.7C.33 2.25 0 3.1 0 4.22v15.56c0 1.12.33 1.97.87 2.52l.13.13 8.72-8.72v-.21L1 1.57l-.13.13zM20.12 10.44l-2.48-1.43-3.09 3.09 3.09 3.09 2.5-1.44c.71-.41.71-1.09 0-1.5l-.02-.81zM4.17.24l12.6 7.29-2.76 2.76L3.18.24C3.53.17 3.87.22 4.17.24z"/></svg>
+              <span class="store-btn-text">
+                <span class="store-btn-sub">Get it on</span>
+                <span class="store-btn-name">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 
