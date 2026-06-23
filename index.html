@@ -1260,7 +1260,14 @@
         }
       });
     });
-  </script>
+
+    // Meta Pixel — track App Store clicks
+    document.querySelectorAll('a[href*="apps.apple.com"]').forEach(a => {
+      a.addEventListener('click', () => {
+        fbq('track', 'InitiateCheckout');
+      });
+    });
+</script>
 
 </body>
 </html>
