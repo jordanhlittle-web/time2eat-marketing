@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Time2Eat, Know What's Safe to Eat Before You Order</title>
-  <meta name="description" content="Time2Eat gives every restaurant a Tummy Trust Score built from real traveler check-ins. Launching in Bali. Coming soon to Thailand, Vietnam, Mexico & Cambodia." />
+  <meta name="description" content="Time2Eat gives every restaurant a Tummy Trust Score built from real traveler check-ins. Live now in Indonesia, Thailand & Vietnam. Coming soon to Mexico & Cambodia." />
 
   <!-- PostHog Analytics -->
   <script>
@@ -18,13 +18,13 @@
   </script>
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Time2Eat — Don't let food poisoning ruin your trip" />
-  <meta property="og:description" content="Time2Eat gives every restaurant a Tummy Trust Score built from real traveler check-ins. Launching in Bali." />
+  <meta property="og:title" content="Time2Eat, Don't let food poisoning ruin your trip" />
+  <meta property="og:description" content="Time2Eat gives every restaurant a Tummy Trust Score built from real traveler check-ins. Live now in Indonesia, Thailand & Vietnam." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.time2eattravel.com/" />
   <meta property="og:image" content="https://www.time2eattravel.com/screenshot-detail-new.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Time2Eat — Don't let food poisoning ruin your trip" />
+  <meta name="twitter:title" content="Time2Eat, Don't let food poisoning ruin your trip" />
   <meta name="twitter:description" content="Know which restaurants are safe before you order. Real check-ins from real travelers." />
   <meta name="twitter:image" content="https://www.time2eattravel.com/screenshot-detail-new.webp" />
   <link rel="canonical" href="https://www.time2eattravel.com/" />
@@ -286,10 +286,41 @@
     .store-btn-text { display: flex; flex-direction: column; gap: 1px; }
     .store-btn-sub { font-size: 10px; color: var(--gray); letter-spacing: 0.03em; }
     .store-btn-name { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; }
-    .coming-soon-note {
-      font-size: 12px;
+
+    /* ── Social proof ── */
+    .social-proof {
+      margin-top: 28px;
+    }
+    .proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(57,255,20,0.07);
+      border: 1px solid rgba(57,255,20,0.25);
+      color: var(--green);
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    .proof-quote {
+      max-width: 440px;
+      border-left: 2px solid var(--pink);
+      padding-left: 14px;
+    }
+    .proof-quote p {
+      font-size: 14px;
+      color: var(--gray);
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+    .proof-quote cite {
+      font-size: 12.5px;
       color: var(--gray2);
-      margin-top: 10px;
+      font-style: normal;
     }
 
     /* Hero right — iPhone 17 frames */
@@ -305,28 +336,21 @@
       position: relative;
     }
 
-    /* iPhone 17 frame
-       Corner radius formula: width * 0.12 outer, (outer - 5) inner
-       Dynamic Island: width * 0.33 wide, width * 0.09 tall
-    */
     .hero-phone {
       position: relative;
-      /* Metallic bevel outer ring */
       background: linear-gradient(135deg, #6e6e73 0%, #1c1c1e 100%);
       padding: 1px;
-      border-radius: 26px; /* 210 * 0.12 = 25.2 */
+      border-radius: 26px;
       box-shadow:
         0 40px 100px rgba(0,0,0,0.85),
         0 8px 32px rgba(0,0,0,0.5);
     }
-    /* Inner casing */
     .hero-phone-inner {
       background: #181818;
       border-radius: 25px;
       padding: 11px 5px 8px;
       position: relative;
     }
-    /* Dynamic Island: 210 * 0.33 = 69px wide, 210 * 0.09 = 19px tall */
     .hero-phone-inner::before {
       content: '';
       position: absolute;
@@ -337,7 +361,6 @@
       border-radius: 999px;
       z-index: 4;
     }
-    /* Power button — right side */
     .hero-phone-inner::after {
       content: '';
       position: absolute;
@@ -346,7 +369,6 @@
       background: linear-gradient(135deg, #6e6e73, #3a3a3c);
       border-radius: 0 2px 2px 0;
     }
-    /* Action + volume buttons — left side via extra element */
     .hero-phone-btns {
       position: absolute;
       left: -3px; top: 0;
@@ -360,11 +382,9 @@
       width: 3px; height: 18px;
       background: linear-gradient(135deg, #6e6e73, #3a3a3c);
       border-radius: 2px 0 0 2px;
-      /* Volume up */
-      box-shadow: 0 34px 0 linear-gradient(135deg, #6e6e73, #3a3a3c);
     }
     .hero-phone-screen {
-      border-radius: 20px; /* inner: 25 - 5 = 20 */
+      border-radius: 20px;
       overflow: hidden;
       box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.4);
     }
@@ -391,8 +411,8 @@
       .hero p { margin-left: auto; margin-right: auto; }
       .hero-actions { justify-content: center; }
       .store-buttons { justify-content: center; }
-      .coming-soon-note { text-align: center; }
       .hero-right { justify-content: center; }
+      .proof-quote { margin: 0 auto; text-align: left; }
     }
 
     /* ────────────────────────────────────────
@@ -636,7 +656,7 @@
       position: relative;
       background: linear-gradient(135deg, #6e6e73 0%, #1c1c1e 100%);
       padding: 1px;
-      border-radius: 23px; /* 190 * 0.12 = 22.8 */
+      border-radius: 23px;
       width: 190px;
       box-shadow: 0 28px 64px rgba(0,0,0,0.75);
     }
@@ -651,7 +671,7 @@
       position: absolute;
       top: 7px; left: 50%;
       transform: translateX(-50%);
-      width: 63px; height: 17px; /* 190 * 0.33, 190 * 0.09 */
+      width: 63px; height: 17px;
       background: #181818;
       border-radius: 999px;
       z-index: 4;
@@ -913,7 +933,7 @@
         <li><a href="#cities">Cities</a></li>
       </ul>
 
-      <a href="https://apps.apple.com/us/app/time2eat-travel/id6765998958" target="_blank" rel="noopener" class="nav-cta">
+      <a href="https://apps.apple.com/us/app/time2eat-travel/id6765998958" target="_blank" rel="noopener" class="nav-cta" id="nav-cta">
         Download the App
       </a>
 
@@ -938,18 +958,18 @@
       <div class="hero-left">
         <div class="badge">
           <span class="badge-dot" aria-hidden="true"></span>
-          Now launching in Bali
+          Now live in Indonesia, Thailand & Vietnam
         </div>
 
-        <h1>Eat safe.<br>Anywhere<br>you <span class="highlight">travel.</span></h1>
+        <h1>Don't let food poisoning ruin your <span class="highlight">trip.</span></h1>
 
-        <p>Time2Eat gives every restaurant a Tummy Trust Score, built from real check-ins by travelers who ate there this week,not star ratings from years ago.</p>
+        <p>Google Maps tells you a restaurant has 4 stars. Time2Eat tells you if someone got sick there last Tuesday, with real check-ins from travelers who ate there this week.</p>
 
         <div class="store-buttons" id="download">
-          <a href="https://apps.apple.com/us/app/time2eat-travel/id6765998958" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <a href="https://apps.apple.com/us/app/time2eat-travel/id6765998958" target="_blank" rel="noopener" data-track="appstore" aria-label="Download on the App Store">
             <img src="app-store-badge.svg" alt="Download on the App Store" height="50" />
           </a>
-          <a href="https://time2eat.food" target="_blank" rel="noopener" class="store-btn" aria-label="Open Time2Eat on the web">
+          <a href="https://time2eat.food" target="_blank" rel="noopener" class="store-btn" data-track="web" aria-label="Open Time2Eat on the web">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span class="store-btn-text">
               <span class="store-btn-sub">Also available on</span>
@@ -966,6 +986,18 @@
               </span>
             </a>
           </div>
+        </div>
+
+        <!-- Social proof -->
+        <div class="social-proof">
+          <div class="proof-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L21.5 9.27l-4.75 4.63L17.8 20.5 12 17.27 6.2 20.5l1.05-6.6L2.5 9.27l6.6-1.01L12 2z"/></svg>
+            1,000+ reports in the app and counting
+          </div>
+          <blockquote class="proof-quote">
+            <p>"I just returned from my first trip without food poisoning and this app was a huge reason why."</p>
+            <cite>Fred, traveler in Bali</cite>
+          </blockquote>
         </div>
       </div>
 
@@ -997,12 +1029,17 @@
     <div class="trust-inner">
       <div class="trust-item">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-        <span>Launching in <strong>Bali</strong></span>
+        <span>Live in <strong>Indonesia, Thailand & Vietnam</strong></span>
+      </div>
+      <span class="trust-dot" aria-hidden="true"></span>
+      <div class="trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+        <span><strong>1,000+</strong> reports and counting</span>
       </div>
       <span class="trust-dot" aria-hidden="true"></span>
       <div class="trust-item">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>6 countries on the roadmap</span>
+        <span>3 destinations live</span>
       </div>
     </div>
   </div>
@@ -1013,7 +1050,7 @@
       <div class="features-header">
         <p class="section-label">Why Time2Eat</p>
         <h2 class="section-title">Food safety data that's actually useful</h2>
-        <p class="section-sub">Google Maps tells you a restaurant has 4 stars. Time2Eat tells you if someone got sick there last Tuesday.</p>
+        <p class="section-sub">Every restaurant gets a Tummy Trust Score, built from real check-ins by travelers who ate there this week, not star ratings from years ago.</p>
       </div>
 
       <div class="features-grid">
@@ -1141,25 +1178,25 @@
     <div class="section-inner">
       <div class="cities-header">
         <p class="section-label">Where we're headed</p>
-        <h2 class="section-title">Starting in Bali.<br>Built for the world.</h2>
-        <p class="section-sub">We're launching in Bali first and expanding city by city as the community grows.</p>
+        <h2 class="section-title">Live in Indonesia, Thailand & Vietnam.<br>Built for the world.</h2>
+        <p class="section-sub">We're live across Southeast Asia and expanding city by city as the community grows.</p>
       </div>
 
       <div class="cities-grid">
         <div class="city-card live">
           <div class="city-flag">🇮🇩</div>
           <div class="city-name">Bali</div>
-          <span class="city-status live">Launching now</span>
+          <span class="city-status live">Live now</span>
         </div>
-        <div class="city-card">
+        <div class="city-card live">
           <div class="city-flag">🇹🇭</div>
           <div class="city-name">Thailand</div>
-          <span class="city-status soon">Coming soon</span>
+          <span class="city-status live">Live now</span>
         </div>
-        <div class="city-card">
+        <div class="city-card live">
           <div class="city-flag">🇻🇳</div>
           <div class="city-name">Vietnam</div>
-          <span class="city-status soon">Coming soon</span>
+          <span class="city-status live">Live now</span>
         </div>
         <div class="city-card">
           <div class="city-flag">🇲🇽</div>
@@ -1189,10 +1226,10 @@
 
       <div class="cta-actions">
         <div class="cta-store-buttons">
-          <a href="https://apps.apple.com/us/app/time2eat-travel/id6765998958" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <a href="https://apps.apple.com/us/app/time2eat-travel/id6765998958" target="_blank" rel="noopener" data-track="appstore" aria-label="Download on the App Store">
             <img src="app-store-badge.svg" alt="Download on the App Store" height="50" />
           </a>
-          <a href="https://time2eat.food" target="_blank" rel="noopener" class="store-btn" aria-label="Open Time2Eat on the web">
+          <a href="https://time2eat.food" target="_blank" rel="noopener" class="store-btn" data-track="web" aria-label="Open Time2Eat on the web">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span class="store-btn-text">
               <span class="store-btn-sub">Also available on</span>
@@ -1210,6 +1247,8 @@
             </a>
           </div>
         </div>
+
+        <p class="cta-note">Free to download. No card required.</p>
       </div>
     </div>
   </section>
@@ -1258,19 +1297,40 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    document.querySelector('.nav-mobile-toggle').addEventListener('click', () => {
+    var IS_ANDROID = /android/i.test(navigator.userAgent);
+
+    // ── UTM capture → PostHog super properties (persist across the session) ──
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        var utms = {};
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+          var v = params.get(k);
+          if (v) utms[k] = v;
+        });
+        if (Object.keys(utms).length && window.posthog) {
+          posthog.register(utms);
+        }
+      } catch (e) { /* tracking must never break the page */ }
+    })();
+
+    function track(event, props) {
+      try { if (window.posthog) posthog.capture(event, props || {}); } catch (e) {}
+    }
+
+    // ── Mobile menu toggle ──
+    var mobileMenu = document.getElementById('mobile-menu');
+    document.querySelector('.nav-mobile-toggle').addEventListener('click', function () {
       mobileMenu.classList.toggle('open');
     });
     function closeMobileMenu() {
       mobileMenu.classList.remove('open');
     }
 
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
+    // ── Smooth scroll for anchor links ──
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var target = document.querySelector(a.getAttribute('href'));
         if (target) {
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1278,13 +1338,19 @@
       });
     });
 
-    // Meta Pixel — track App Store clicks
-    document.querySelectorAll('a[href*="apps.apple.com"]').forEach(a => {
-      a.addEventListener('click', () => {
-        fbq('track', 'InitiateCheckout');
+    // ── Conversion events: App Store + web clicks ──
+    document.querySelectorAll('a[data-track="appstore"], .nav-cta[href*="apps.apple.com"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        track('landing_appstore_click', { platform: IS_ANDROID ? 'android' : 'ios_or_desktop' });
+        try { fbq('track', 'InitiateCheckout'); } catch (e) {}
       });
     });
-</script>
+    document.querySelectorAll('a[data-track="web"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        track('landing_web_click', { platform: IS_ANDROID ? 'android' : 'ios_or_desktop' });
+      });
+    });
+  </script>
 
 </body>
 </html>
