@@ -179,7 +179,7 @@
     .nav-cta {
       flex-shrink: 0;
       padding: 10px 20px;
-      background: var(--ink);
+      background: var(--pink-btn);
       color: #FFFFFF;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
@@ -187,9 +187,13 @@
       border-radius: 100px;
       text-decoration: none;
       white-space: nowrap;
-      transition: transform 0.15s ease, box-shadow 0.2s ease;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
     }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+    .nav-cta:hover {
+      background: var(--pink-btn2);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(200,0,200,0.30);
+    }
 
     .nav-mobile-toggle {
       display: none;
