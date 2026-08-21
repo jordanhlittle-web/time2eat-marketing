@@ -6,17 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.time2eattravel.com/partners.html</loc>
+    <loc>https://www.time2eattravel.com/partners</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.time2eattravel.com/privacy-policy.html</loc>
+    <loc>https://www.time2eattravel.com/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.time2eattravel.com/terms-of-service.html</loc>
+    <loc>https://www.time2eattravel.com/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
